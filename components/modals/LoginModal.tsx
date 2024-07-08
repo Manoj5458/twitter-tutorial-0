@@ -3,7 +3,6 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import { useCallback, useState } from "react";
 import Input from "../Input";
 import Modal from "../Modal";
-import axios from "axios";
 import { signIn } from "next-auth/react";
 
 const LoginModal = () => {

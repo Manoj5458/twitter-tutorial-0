@@ -1,7 +1,9 @@
-import serverAuth from "@/libs/serverauth";
+import serverAuth from "@/libs/serverAuth";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+    // throw req;
+
     if(req.method !== 'GET') {
         return res.status(405).end();
     }

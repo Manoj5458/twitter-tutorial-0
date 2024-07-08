@@ -4,6 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 import prisma from "@/libs/prismadb";
+import toast from "react-hot-toast";
 
 export default NextAuth({
     adapter: PrismaAdapter(prisma),
@@ -41,6 +42,7 @@ export default NextAuth({
                 );    
 
                 if (!isCorrectPassword) {
+                    toast.error("Invalid credentials");
                     throw new Error("Invalid credentials");
                 } 
 
